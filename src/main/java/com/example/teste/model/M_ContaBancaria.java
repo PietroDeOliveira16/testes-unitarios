@@ -3,7 +3,7 @@ package com.example.teste.model;
 import java.math.BigDecimal;
 
 public class M_ContaBancaria {
-    private double saldo;
+    protected double saldo;
 
     public M_ContaBancaria() {
         this.saldo = 0.0;
@@ -11,7 +11,7 @@ public class M_ContaBancaria {
 
     /**
      * Retorna o saldo
-     * @return BigDecimal
+     * @return double
      */
     public double getSaldo() {
         return saldo;
@@ -20,7 +20,7 @@ public class M_ContaBancaria {
     /**
      * Saca {@code valor} da conta
      * @param valor em R$ a ser sacado
-     * @return o saldo depois do saque
+     * @return saldo depois do saque
      */
     public double sacar(double valor){
         if(valor <= 0.0){
@@ -36,7 +36,7 @@ public class M_ContaBancaria {
     /**
      * Deposita {@code valor} na conta
      * @param valor em R$ a ser depositado
-     * @return o saldo depois do depósito
+     * @return saldo depois do depósito
      */
     public double depositar(double valor){
         if(valor < 0.0){

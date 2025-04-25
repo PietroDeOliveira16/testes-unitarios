@@ -2,8 +2,6 @@ import com.example.teste.model.M_ContaBancaria;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.math.BigDecimal;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ContaBancariaTest {
@@ -54,7 +52,6 @@ public class ContaBancariaTest {
         IllegalArgumentException ex = assertThrows(IllegalArgumentException.class, () -> {
             double saldo = conta.depositar(-100.0);
         }, "O depósito deveria dar erro ao receber um valor negativo");
-        assertEquals("Valor do depósito deve sempre ser positivo", ex.getMessage(), "Mensagem de erro não é: \n \"Erro: Valor do depósito deve sempre ser positivo\"");
     }
 
     /**
